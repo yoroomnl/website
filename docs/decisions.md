@@ -6,7 +6,8 @@
 - **Domain**: yoroom.nl (primary), yoroom.online (redirect)
 - **Booking**: time2book.me (existing, embedded or linked)
 - **Payments**: Stripe via time2book.me
-- **DNS**: TransIP
+- **Registrar**: TransIP
+- **DNS Hosting**: TBD
 
 ## Why GitHub Pages
 Free, integrates with existing GitHub org, simple to deploy.
