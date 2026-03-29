@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 150)
     }
     typeText('title', 'Yo Room')
-    typeText('aboutmetitle', 'About Me')
+    if (document.getElementById('aboutmetitle')) {
+        typeText('aboutmetitle', 'About Me')
+    }
 
     // Policy button opens modal
     document.getElementById('policy-btn').addEventListener('click', function() {
