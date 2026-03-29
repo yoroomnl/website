@@ -1,18 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const texttitle = "Yo Room"
-    const destitle = "Hi, I am Eva — a certified Yoga teacher based in Veldhoven. I offer private and small group Hatha and Yin yoga classes in my cosy home studio. Before booking, please take a moment to read the studio Policy at the bottom of this page."
-    let i = 0
-    setInterval(function() {
-        if (i < texttitle.length){
-            document.getElementById('title').innerHTML += texttitle[i]
-            i += 1
-        } else{
-            stop()
-        }
-
-
-    }, 150)
-
+    function typeText(elementId, text) {
+        let i = 0
+         setInterval(function() {
+            if (i < text.length) {
+                document.getElementById(elementId).innerHTML += text[i]
+                i += 1
+            } else {
+                stop()
+            }
+        }, 150)
+    }
+    typeText('title', 'Yo Room')
+    typeText('aboutmetitle', 'About Me')
 
     // Policy button opens modal
     document.getElementById('policy-btn').addEventListener('click', function() {
