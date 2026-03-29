@@ -36,26 +36,32 @@
     #policy-modal.show .inner {
         transform: translateY(0);
     }
+    @media (hover: none) {
+        #cursor {
+            display: none;
+        }
+    }
 </style>
 
 
-<body class="h-14 bg-linear-to-bl from-violet-500 to-fuchsia-500 text-gray-900 min-h-screen">
+<body class="h-14 bg-gradient-to-r from-indigo-100 via-orange-50 to-amber-50 text-gray-900 min-h-screen">
 <!-- Main content -->
     <main class="max-w-3xl mx-auto px-6 py-16" id="main-content">
         <div class="grid grid-cols-2 gap-2 items-center">
         <h1 class="text-6xl font-bold mb-4 ">Yo, Room!</h1>
 
             <img src="He8GSj048uA3y9J1PD1dipyHpRp1BwSuOk5Q0SNJ.webp" height="200" width="200" class="rounded-full rounded-full ring-2 ring-indigo-400  scale-75 hover:scale-100 transition-transform"/>
-
         </div>
-
+        <a id="insta-btn" href="https://www.instagram.com/e.remezova" class="self-center scale-75 inline-block bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 text-white font-bold py-2.5 px-6 shadow-lg shadow-indigo-500/50 rounded-full transition-colors hover:scale-100 active:scale-75 transition-transform">
+            Instagram
+        </a>
         <div class="flex flex-col items-start gap-4">
             <p class="self-center text-gray-500 text-lg mb-8">Hi, I am Eva — a certified Yoga teacher based in Veldhoven. I offer private and small group Hatha and Yin yoga classes in my cosy home studio. Before booking, please take a moment to read the studio Policy at the bottom of this page.</p>
                 <h2 class="text-xl font-bold mb-4 self-center">Schedule:</h2>
-                <h2 class="mb-4 self-center">Monday: 19:00-20:00</h2>
-                <h2 class="mb-4 self-center">Tuesday: 19:15-20:00 ONLINE</h2>
-                <h2 class="mb-4 self-center">Thursday: 19:15-20:00 ONLINE</h2>
-                <h2 class="mb-4 self-center">Friday: 19:00-20:00</h2>
+                <h2 class="mb-4 self-center">Monday: 19:00-20:00 €10.00</h2>
+                <h2 class="mb-4 self-center">Tuesday: 19:15-20:00 ONLINE €5.00</h2>
+                <h2 class="mb-4 self-center">Thursday: 19:15-20:00 ONLINE €5.00 </h2>
+                <h2 class="mb-4 self-center">Friday: 19:00-20:00 €10.00</h2>
 
 
         </div>
