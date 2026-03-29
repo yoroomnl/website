@@ -25,3 +25,15 @@ document.addEventListener('mousedown', function (){
 document.addEventListener('mouseup', function (){
     document.getElementById('cursor').classList.remove('scale-50')
 })
+const texttitle = "Yo, Room!"
+let i = 0
+setInterval(function() {
+    if (i < texttitle.length){
+        document.getElementById('title').innerHTML += texttitle[i]
+        i += 1
+    } else{
+        stop()
+    }
+
+
+}, 100)
