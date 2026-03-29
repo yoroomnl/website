@@ -7,7 +7,36 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-
+<style>
+    #cursor {
+        width: 40px;
+        height: 40px;
+        background: black;
+        opacity: 0.5;
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+    }
+    *{
+        cursor: none;
+    }
+    #policy-modal {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    #policy-modal .inner {
+        transform: translateY(40px);
+        transition: transform 0.3s ease;
+    }
+    #policy-modal.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    #policy-modal.show .inner {
+        transform: translateY(0);
+    }
+</style>
 
 
 <body class="h-14 bg-linear-to-bl from-violet-500 to-fuchsia-500 text-gray-900 min-h-screen">
@@ -17,15 +46,29 @@
         <h1 class="text-6xl font-bold mb-4 ">Yo, Room!</h1>
 
             <img src="He8GSj048uA3y9J1PD1dipyHpRp1BwSuOk5Q0SNJ.webp" height="200" width="200" class="rounded-full rounded-full ring-2 ring-indigo-400  scale-75 hover:scale-100 transition-transform"/>
+
         </div>
 
         <div class="flex flex-col items-start gap-4">
+            <p class="self-center text-gray-500 text-lg mb-8">Hi, I am Eva — a certified Yoga teacher based in Veldhoven. I offer private and small group Hatha and Yin yoga classes in my cosy home studio. Before booking, please take a moment to read the studio Policy at the bottom of this page.</p>
+                <h2 class="text-xl font-bold mb-4 self-center">Schedule:</h2>
+                <h2 class="mb-4 self-center">Monday: 19:00-20:00</h2>
+                <h2 class="mb-4 self-center">Tuesday: 19:15-20:00 ONLINE</h2>
+                <h2 class="mb-4 self-center">Thursday: 19:15-20:00 ONLINE</h2>
+                <h2 class="mb-4 self-center">Friday: 19:00-20:00</h2>
 
-            <p class="self-center text-gray-500 text-lg mb-8">Hi, I am Eva and I am a Yoga teacher. Please read the Policy of my yoga studio</p>
-                <a href="https://time2book.me/yo-room" class=" self-center scale-100 inline-block bg-indigo-500 text-white font-bold py-2.5 px-6 shadow-lg shadow-indigo-500/50 rounded-full hover:bg-indigo-700 transition-colors hover:scale-125 transition-transform">
-                    Book Me
-                </a>
+
         </div>
+        <div class="flex flex-col items-start gap-4">
+            <a href="https://time2book.me/yo-room" class=" self-center scale-100 inline-block bg-indigo-500 text-white font-bold py-2.5 px-6 shadow-lg shadow-indigo-500/50 rounded-full hover:bg-indigo-700 transition-colors hover:scale-125 active:scale-95 transition-transform">
+                Book Me
+            </a>
+            <a href="https://time2book.me/yo-room" class=" self-center scale-100 inline-block bg-green-500 text-white font-bold py-2.5 px-6 shadow-lg shadow-green-500/50 rounded-full hover:bg-green-700 transition-colors hover:scale-125 active:scale-95 transition-transform">
+                Contact Me
+            </a>
+        </div>
+
+
         <!-- Hero -->
         <div class="grid grid-cols-2 gap-4 items-center">
 
@@ -38,17 +81,17 @@
 
         <!-- Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-16">
-            <div class="bg-white border border-indigo-200 rounded-2xl p-6 scale-100 hover:scale-110 transition-transform">
-                <h2 class="font-semibold mb-1">My certifaction</h2>
-                <p class="text-sm text-gray-500">I have a RYT200 certifaction in hatha and Yin</p>
+            <div class="bg-white border border-indigo-200 rounded-2xl p-6 scale-100 hover:scale-110 active:scale-95 transition-transform">
+                <h2 class="font-semibold mb-1">About Eva</h2>
+                <p class="text-sm text-gray-500">I am Eva, a certified Hatha and Yin Yoga teacher (RYT200), offering private and small group classes.</p>
             </div>
-            <div class="bg-white border border-indigo-200 rounded-2xl p-6 scale-100 hover:scale-110 transition-transform">
-                <h2 class="font-semibold mb-1">Card two</h2>
-                <p class="text-sm text-gray-500">A short description goes here.</p>
+            <div class="bg-white border border-indigo-200 rounded-2xl p-6 scale-100 hover:scale-110 active:scale-95 transition-transform">
+                <h2 class="font-semibold mb-1">The Studio</h2>
+                <p class="text-sm text-gray-500">Classes are held in a quiet, warm home basement studio in Veldhoven (Oerle), designed for focus and calm.</p>
             </div>
-            <div class="bg-white border border-indigo-200 rounded-2xl p-6 scale-100 hover:scale-110 transition-transform">
-                <h2 class="font-semibold mb-1">Card three</h2>
-                <p class="text-sm text-gray-500">A short description goes here.</p>
+            <div class="bg-white border border-indigo-200 rounded-2xl p-6 scale-100 hover:scale-110 active:scale-95 transition-transform">
+                <h2 class="font-semibold mb-1">What to Expect</h2>
+                <p class="text-sm text-gray-500">A slow paced Hatha practice including breathwork, strength-building, stretching and deep relaxation.</p>
             </div>
         </div>
 </main>
@@ -56,24 +99,37 @@
 
 
 <!-- Footer -->
-<footer class="text-center text-sm text-gray-400 py-8 border-t border-gray-100 mt-16">
+<footer class="text-center text-sm text-gray-400 py-8 border-t border-gray-100 mt-16 ">
     <button id="policy-btn">Policy</button>
 
 
-    &copy; 2026 MyApp. All rights reserved.
+    &copy; 2026 YoRoom. All rights reserved.
 </footer>
 
-<div id="policy-modal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
-    <div class="bg-white rounded-2xl p-8 max-w-sm w-full mx-4">
+<div id="policy-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center">
+    <div class="bg-white rounded-2xl p-10 max-w-sm w-full mx-4">
 
-        <h2 class="text-xl font-bold mb-4">Book a session</h2>
-        <p class="text-gray-500 mb-6">Your content here...</p>
-
+        <h2 class="text-xl font-bold mb-4">Policy</h2>
+        <p class="text-gray-500 mb-6">Cancellation
+            You can cancel your booking up to 24 hours before it starts.</p>
+        <p class="text-black-500 mb-6 font-bold">To ensure the best experience for everyone, please take a moment to review the guidelines:</p>
+        <p class="text-gray-500 mb-6 ">Please aim to arrive 8-10 minutes before class starts. This gives you plenty of time to stow your belongings and settle onto your mat without rushing.</p>
+        <p class="text-gray-500 mb-6 ">I have a few yoga mats available in studio. However, for hygiene purposes, I highly recommend bringing your own mat if possible.</p>
+        <p class="text-gray-500 mb-6 ">I suggest bringing a small towel and a bottle of water to stay comfortable and hydrated during your practice.</p>
+        <p class="text-gray-500 mb-6 ">If you need to cancel, please do so at least 24 hours in advance. Late cancellations or no-shows may be subject to a fee or loss of class credit.</p>
+        <p class="text-gray-500 mb-6 ">Thank you! 🙏</p>
         <!-- Close button -->
         <button id="close-btn">Close</button>
 
     </div>
 </div>
+
+<div id="cursor" class="transition-transform">
+
+</div>
+
+
+
 
 <script src="main.js"></script>
 </body>
