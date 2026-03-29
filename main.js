@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const texttitle = "Yo Room"
+    const destitle = "Hi, I am Eva — a certified Yoga teacher based in Veldhoven. I offer private and small group Hatha and Yin yoga classes in my cosy home studio. Before booking, please take a moment to read the studio Policy at the bottom of this page."
     let i = 0
     setInterval(function() {
         if (i < texttitle.length){
@@ -10,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
 
-    }, 100)
+    }, 150)
+
 
     // Policy button opens modal
     document.getElementById('policy-btn').addEventListener('click', function() {

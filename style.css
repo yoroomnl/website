@@ -1,0 +1,33 @@
+#cursor {
+    width: 40px;
+    height: 40px;
+    background: black;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+}
+*{
+    cursor: none;
+}
+#policy-modal {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+#policy-modal .inner {
+    transform: translateY(40px);
+    transition: transform 0.3s ease;
+}
+#policy-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+#policy-modal.show .inner {
+    transform: translateY(0);
+}
+@media (hover: none) {
+    #cursor {
+        display: none;
+    }
+}
