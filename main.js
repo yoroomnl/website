@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('policy-modal').classList.add('show')
     })
     // Close button hides modal and shows main content
-    document.getElementById('close-btn').addEventListener('click', function() {
-        document.getElementById('main-content').classList.remove('hidden')
+    document.getElementById('policy-modal').addEventListener('click', function (){
         document.getElementById('policy-modal').classList.remove('show')
+        document.getElementById('main-content').classList.remove('hidden')
     })
 
 })
