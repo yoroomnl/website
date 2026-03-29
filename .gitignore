@@ -1,3 +1,6 @@
+# Unneeded folders
+/.idea/
+
 # Logs
 logs
 *.log
