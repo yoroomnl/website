@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav a')
+
+    navLinks.forEach(function(link) {
+        if (window.location.pathname.includes(link.getAttribute('href'))) {
+            link.classList.add('bg-black', 'bg-opacity-20')
+        }
+    })
+
+    console.log(window.location.pathname)
     function typeText(elementId, text) {
         let i = 0
          setInterval(function() {
@@ -15,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
         typeText('aboutmetitle', 'About Me')
     }
 
+
+
     // Policy button opens modal
     document.getElementById('policy-btn').addEventListener('click', function() {
         document.getElementById('policy-modal').classList.add('show')
@@ -28,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 document.addEventListener('mousemove', function(e) {
-    console.log(e.clientX, e.clientY)
     var mouse = document.getElementById('cursor')
     mouse.style.left = `${e.clientX - 20}px`
     mouse.style.top = `${e.clientY - 20}px`
